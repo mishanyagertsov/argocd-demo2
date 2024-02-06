@@ -16,13 +16,13 @@ ingress:
     ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
-  hosts:
-    - host: dev-artemis.mg-aws.com
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: 
-   - secretName: dev-artemis-tls
-     hosts:
-       - dev-artemis.mg-aws.com
+    hosts:
+      - host: dev-artemis.mg-aws.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls: 
+     - secretName: dev-artemis-tls
+       hosts:
+         - dev-artemis.mg-aws.com
   
